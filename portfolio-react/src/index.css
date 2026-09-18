@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root,
+html.dark {
+  --c-bg: #080b0f;
+  --c-surface: #0f141a;
+  --c-border: #1e2833;
+  --c-text-primary: #e7ecef;
+  --c-text-muted: #8592a0;
+  --c-text-dim: #566270;
+  --c-grid-line: rgba(255, 255, 255, 0.035);
+  --c-nav-bg: rgba(8, 11, 15, 0.85);
+}
+
+html.light {
+  --c-bg: #fafaf9;
+  --c-surface: #ffffff;
+  --c-border: #e2e4e8;
+  --c-text-primary: #1b2430;
+  --c-text-muted: #5b6674;
+  --c-text-dim: #8996a6;
+  --c-grid-line: rgba(15, 23, 32, 0.05);
+  --c-nav-bg: rgba(250, 250, 249, 0.85);
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -9,10 +32,6 @@ html {
 body {
   @apply bg-bg text-text-primary font-sans antialiased;
   transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-html.light body {
-  @apply bg-bg-light text-slate-800;
 }
 
 ::selection {
@@ -33,7 +52,7 @@ html.light body {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2833;
+  background: var(--c-border);
   border-radius: 8px;
 }
 

@@ -1,7 +1,6 @@
-import { ExternalLink } from "lucide-react";
+import { Code2, ExternalLink } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { CP_STATS } from "../data/achievements";
 import { SOCIAL_LINKS } from "../data/socialLinks";
 
 const PROFILES = [
@@ -19,47 +18,27 @@ export default function CompetitiveProgramming() {
       />
       <div className="max-w-6xl mx-auto px-5 sm:px-8 relative">
         <Reveal>
-          <SectionHeading title="Problem Solving &amp; Competitive Programming" />
+          <SectionHeading
+            title="Problem Solving &amp; Competitive Programming"
+            subtitle="1,000+ Data Structures & Algorithms problems solved across LeetCode, CodeChef, and Codeforces."
+          />
         </Reveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-          {CP_STATS.map((stat, i) => (
-            <Reveal key={stat.label} delay={i * 80}>
-              {stat.href ? (
-                <a
-                  href={stat.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block h-full rounded-xl border border-border bg-surface p-5 sm:p-6 text-center hover:border-accent-blue/60 transition-colors"
-                >
-                  <div className="font-mono font-extrabold text-2xl sm:text-3xl text-accent-blue mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-[12px] text-text-muted">{stat.label}</div>
-                </a>
-              ) : (
-                <div className="h-full rounded-xl border border-border bg-surface p-5 sm:p-6 text-center">
-                  <div className="font-mono font-extrabold text-2xl sm:text-3xl text-accent-amber mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-[12px] text-text-muted">{stat.label}</div>
-                </div>
-              )}
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal delay={120}>
-          <div className="flex flex-wrap gap-3">
+        <Reveal delay={80}>
+          <div className="grid sm:grid-cols-3 gap-4">
             {PROFILES.map((p) => (
               <a
                 key={p.label}
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 font-mono text-[12.5px] font-semibold px-4 py-2.5 rounded-md border border-border hover:border-accent-blue hover:text-accent-blue transition-colors"
+                className="flex items-center justify-between gap-3 rounded-xl border border-border bg-surface px-5 py-4 hover:border-accent-blue/60 transition-colors group"
               >
-                {p.label} <ExternalLink size={13} />
+                <span className="flex items-center gap-2.5 font-mono text-[14px] font-semibold">
+                  <Code2 size={16} className="text-text-dim group-hover:text-accent-blue transition-colors" />
+                  {p.label}
+                </span>
+                <ExternalLink size={14} className="text-text-dim group-hover:text-accent-blue transition-colors" />
               </a>
             ))}
           </div>

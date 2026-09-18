@@ -1,12 +1,3 @@
-import { SOCIAL_LINKS } from "./socialLinks";
-
-export const CP_STATS = [
-  { label: "Problems Solved", value: "1000+", sub: "LeetCode · CodeChef · Codeforces" },
-  { label: "LeetCode Max Rating", value: "1670", sub: "View profile", href: SOCIAL_LINKS.leetcode },
-  { label: "CodeChef", value: "2★", sub: "1464 max rating", href: SOCIAL_LINKS.codechef },
-  { label: "Codeforces Rating", value: "970", sub: "Newbie, max rating", href: SOCIAL_LINKS.codeforces },
-];
-
 export const ACHIEVEMENTS = [
   {
     title: "Flipkart GRiD 8.0 — Semi-Finalist",

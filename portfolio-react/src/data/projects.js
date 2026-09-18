@@ -1,6 +1,55 @@
-export const PROJECT_TAGS = ["All", "Systems", "Backend", "Full Stack", "React", "C", "Node.js"];
+export const PROJECT_TAGS = ["All", "Systems", "Backend", "Full Stack", "React", "C", "Node.js", "MongoDB", "Real-Time"];
 
 export const PROJECTS = [
+  {
+    id: "aml-risk-engine",
+    name: "Real-Time Transaction Risk & AML Detection Engine",
+    shortDescription:
+      "A real-time transaction monitoring system that simulates how banks detect fraud and money laundering — built on the MERN stack with MongoDB Time Series collections and a fully explainable, rule-based risk engine.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB Time Series",
+      "Socket.io",
+      "Recharts",
+      "Docker",
+      "Jest",
+    ],
+    tags: ["Full Stack", "Backend", "React", "Node.js", "MongoDB", "Real-Time"],
+    highlights: [
+      "Built an event-driven pipeline that ingests a live transaction stream, scores each transaction in milliseconds, and surfaces flagged activity to analysts in real time.",
+      "Designed a transparent, weighted rules engine evaluating four independent signals — velocity, amount anomaly, geographic mismatch, and structuring — chosen deliberately over a black-box model so every decision stays auditable and reproducible.",
+      "Implemented tiered decisioning (AUTO_APPROVE / FLAG_FOR_REVIEW / BLOCK) with a full explainability breakdown showing exactly which rules fired and why.",
+      "Stored high-velocity event data in MongoDB Time Series collections and pushed flagged transactions instantly to a React dashboard over Socket.io.",
+      "Kept the scoring module pure and decoupled from the database and API layers, unit tested in isolation with Jest.",
+      "Containerized the full stack with Docker Compose so MongoDB, the API, and the dashboard start with a single command.",
+    ],
+    githubUrl: "https://github.com/70Purushottam/real-time-transaction-risk-aml-engine",
+    liveUrl: "https://real-time-transaction-risk-aml-engi.vercel.app",
+    featured: true,
+    diagram: [
+      "Stream Simulator",
+      "       |  POST /transactions",
+      "       v",
+      "  Express API  ──────► MongoDB (Time Series)",
+      "       |",
+      "       v",
+      "  Rule Engine",
+      "   ├─ velocity        (max 40)",
+      "   ├─ amount anomaly  (max 30)",
+      "   ├─ geo mismatch    (max 20)",
+      "   └─ structuring     (max 25)",
+      "       |",
+      "       v",
+      "   Risk Score ──► 0-29   AUTO_APPROVE",
+      "              ──► 30-69  FLAG_FOR_REVIEW",
+      "              ──► 70+    BLOCK",
+      "       |  Socket.io",
+      "       v",
+      "  React Dashboard (live feed + explainability)",
+    ],
+  },
   {
     id: "proxy-server",
     name: "Multi-Threaded Proxy Server with LRU Cache",
@@ -54,7 +103,7 @@ export const PROJECTS = [
       "Added client-side validation for a consistent user experience.",
     ],
     githubUrl: "https://github.com/70Purushottam/Full-Stack-URL-Shortener",
-    liveUrl: null,
+    liveUrl: "https://full-stack-url-shortener-phi.vercel.app/",
     featured: true,
     mockup: [
       "┌───────────────────────────────────┐",

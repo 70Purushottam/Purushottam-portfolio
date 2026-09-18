@@ -1,7 +1,7 @@
 export const SKILLS = [
   {
     category: "Languages",
-    items: ["C++", "C", "Java", "Python"],
+    items: ["C++", "C", "Java", "Python", "JavaScript"],
   },
   {
     category: "Core Computer Science",
@@ -9,14 +9,18 @@ export const SKILLS = [
   },
   {
     category: "Frontend",
-    items: ["React.js"],
+    items: ["React.js", "Recharts"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express.js", "REST APIs"],
+    items: ["Node.js", "Express.js", "REST APIs", "Socket.io"],
+  },
+  {
+    category: "Databases",
+    items: ["MongoDB", "MongoDB Time Series"],
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub", "IntelliJ IDEA", "VS Code"],
+    items: ["Git", "GitHub", "Docker", "Jest", "IntelliJ IDEA", "VS Code"],
   },
 ];

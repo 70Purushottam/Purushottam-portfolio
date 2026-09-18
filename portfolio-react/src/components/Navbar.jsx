@@ -26,9 +26,10 @@ export default function Navbar({ theme, toggleTheme }) {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "bg-bg/85 dark:bg-bg/85 backdrop-blur-md border-b border-border"
+          ? "backdrop-blur-md border-b border-border"
           : "bg-transparent border-b border-transparent"
       }`}
+      style={scrolled ? { backgroundColor: "var(--c-nav-bg)" } : undefined}
     >
       <nav className="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
         <a href="#home" className="font-mono font-bold text-sm sm:text-base tracking-tight">

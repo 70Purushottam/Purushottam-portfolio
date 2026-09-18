@@ -137,4 +137,3 @@ public/
   profile links only, matching what the brief specified.
 - All social/profile/certificate URLs used are real (not placeholders), since they were already
   known when this was built.
-"# Portfolio" 

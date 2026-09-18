@@ -6,16 +6,13 @@ export default {
     extend: {
       colors: {
         bg: {
-          DEFAULT: "#080B0F",
-          light: "#FAFAF9",
+          DEFAULT: "var(--c-bg)",
         },
         surface: {
-          DEFAULT: "#0F141A",
-          light: "#FFFFFF",
+          DEFAULT: "var(--c-surface)",
         },
         border: {
-          DEFAULT: "#1E2833",
-          light: "#E4E4E1",
+          DEFAULT: "var(--c-border)",
         },
         accent: {
           blue: "#5FA8FF",
@@ -24,9 +21,9 @@ export default {
           green: "#4ADE80",
         },
         text: {
-          primary: "#E7ECEF",
-          muted: "#8592A0",
-          dim: "#566270",
+          primary: "var(--c-text-primary)",
+          muted: "var(--c-text-muted)",
+          dim: "var(--c-text-dim)",
         },
       },
       fontFamily: {
@@ -35,7 +32,7 @@ export default {
       },
       backgroundImage: {
         "grid-pattern":
-          "linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px)",
+          "linear-gradient(var(--c-grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--c-grid-line) 1px, transparent 1px)",
       },
       keyframes: {
         blink: {
